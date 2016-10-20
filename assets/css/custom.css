@@ -33,19 +33,27 @@ a {transition: .3s; text-decoration: none !important;}
 
 .container {width: 100%; height: 100%;}
 
-body {height: 100%; width: 100%; margin: 0; overflow-x: scroll; overflow-y: hidden; background-color: #FFF;}
+body {height: 100%; width: 100%; margin: 0; overflow-x: scroll; overflow-y: hidden; background-color: #FFF; min-height: 660px;}
 main {width: 4000px; height: 100%;}
-section {display: inline-block; height: 100%; width: 100%; vertical-align: top;} 
+section {display: inline-block; height: 100%; width: 100%; vertical-align: top; position: relative;} 
 ul li a {color: inherit;}
 
-.landing {background-color: #000;}
-.landing .background {position: fixed; background-image: url(../img/bg1.jpg); background-repeat: no-repeat; background-size: cover; height: 100%; width: 100%; opacity: .3;}
+.background {position: fixed; background-image: url(../img/bg1.jpg); background-repeat: no-repeat; background-size: cover; height: 100%; width: 100%;}
+.overlay {position: absolute; height: 100%; width: 100%;}
+.landing .overlay {background-color: rgba(0,0,0,.85);}
 .landing-logo img {position: relative; width: 300px; margin: 200px auto 0; opacity: 0;}
 .landing-logo button {display: block; margin: 20px auto 0; background-color: transparent; border-radius: 0; width: 65px; height: 32px; border: 1px solid #FFF; opacity: 0;}
 .landing-logo button:before {background: #5f051f;}
 .landing-logo button i {color: #FFF; position: relative;}
 
 .updates {background-color: transparent;}
+.updates .overlay {background-color: rgba(0,0,0,.65);}
+.updates .container:before {position: absolute; top: -100px; height: 150px; width: 100%; left: 0; background-color: #202326; transform: skew(0deg, -4deg); content: " ";}
+.updates .container:after {position: absolute; bottom: -50px; height: 100px; width: 100%; left: 0; background-color: #202326; transform: skew(0deg, 4deg); content: " "; z-index: 48;}
+.updates .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto; background-color: #202326;}
+.updates h3, .updates ul li {color: #FFF;}
+.news-heading {color: #FFF;}
+.news-heading p {font-family: 'Dosis', sans-serif;}
 
 .carousel-wrapper .item img {width: 100%;}
 .carousel-wrapper .carousel-indicators {left: 0; bottom: 0; margin-bottom: 0; margin-left: 0; width: 100%; overflow: auto;}
@@ -55,5 +63,3 @@ ul li a {color: inherit;}
 
 .align-content-right {text-align: right;}
 
-.news-wrapper {position: relative; height: 500px; top: 50%; transform: translateY(-50%); background-color: rgba(238,238,238,.5);}
-.news-heading p {font-family: 'Dosis', sans-serif;}

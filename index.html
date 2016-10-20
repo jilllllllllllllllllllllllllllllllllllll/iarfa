@@ -38,11 +38,6 @@
 				      	<li><a tabindex="-1" href="#page-contact" class="hvr-icon-pop">&nbsp;</a></li>
 			    	</ul>
 			    	<button class="btn btnShare hvr-shrink" type="button" id="share-menu"><span class="fa fa-share-alt" aria-hidden="true"></span></button>
-			    	<!-- <ul class="dropdown-menu share-menu" role="menu" aria-labelledby="share-menu">
-				      	<li><a tabindex="-1" href="#page-logo" class="hvr-icon-pop">&nbsp;</a></li>
-				      	<li><a tabindex="-1" href="#page-updates" class="hvr-icon-pop">&nbsp;</a></li>
-				      	<li><a tabindex="-1" href="#page-gallery" class="hvr-icon-pop">&nbsp;</a></li>
-			    	</ul> -->
 				</div>	
 			</div>
 		</div>
@@ -50,8 +45,10 @@
 
 	<main>
 		<div class="background"></div>
+		<div class=""></div>
 
 		<section class="landing" id="section-landing">
+			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 landing-logo">
@@ -60,13 +57,14 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="updates" id="section-updates">
+		</section><!-- 
+		--><section class="updates" id="section-updates">
+			<div class="overlay"></div>
 			<div class="container">
-				<div class="row">
+				<div class="row" style="position: relative; z-index: 50;">
 					<div class="col-md-8 col-md-offset-2">
-						<div class="row wHeight">
-							<div class="col-md-12 news-wrapper">
+						<div class="row">
+							<div class="col-md-12">
 								<div class="row">
 									<div class="col-md-12 news-heading">
 										<h2>NEWS</h2>
@@ -148,47 +146,5 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-	<script type="text/javascript">
-		function setBody() {
-			$('body').css({'height': $(window).height(), 'width': $(window).width()});
-			$('section').css({'width': $(window).width()});
-			$('.wHeight').css({'height': $(window).height()});
-		}
-
-		function animateArrow() {
-			$('.btnArrow i').animate({
-				'left': '8px'
-			}, 1200, 'swing', function() {
-				$('.btnArrow i').animate({'left': '-2px'}, 1200, 'swing', function(){
-					animateArrow();
-				});
-			})
-		};
-
-		function animateLanding() {
-			setTimeout(function() {
-				$('.landing-logo img').fadeTo(2400, 1);
-			}, 800);
-
-			setTimeout(function() {
-				$('.landing-logo button').fadeTo(3000, 1);
-			}, 1600)
-		}
-
-		$('body').mousewheel(function(e, delta) {
-		    $(this).scrollLeft(this.scrollLeft + (-delta * 40));
-		    e.preventDefault();
-		});
-
-		$(function() {
-			setBody();
-			animateArrow();
-			animateLanding();
-		});
-		$(window).resize(function(){
-			setBody();
-		});
-
-
-	</script>
+	<script type="text/javascript" src="assets/js/custom.js"></script>
 </html>
