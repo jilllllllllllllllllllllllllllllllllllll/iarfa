@@ -1,0 +1,59 @@
+body {background-color: #000;}
+
+a {transition: .3s; text-decoration: none !important;}
+* {outline: none !important; font-family: 'Righteous', cursive;}
+
+.nav-main {position: fixed; top: 25px; left: 25px; z-index: 999;}
+.nav-main .logo-container {width: 180px; height: 95px;}
+.nav-main .logo-container img {border: 2px solid #5f051f; border-radius: 10px; background-color: #FFF;}
+.nav-main .btn {border: 1px solid #FFF; margin-top: 10px; padding: 15px 35px; background-color: #5f051f; transition: .3s;}
+.nav-main .btn:hover {background-color: #FFF;}
+.nav-main .btn span {color: #FFF; transition: .3s;}
+.nav-main .btn:hover span {color: #5f051f;}
+.nav-main .btnShare {margin-left: 5px;} 
+.nav-main .dropdown-menu {height: 0; border: 0; transition: .5s; display: block; opacity: 0; overflow: hidden; left: 0; min-width: 140px; margin-top: 10px; box-shadow: none; background-color: transparent;}
+.nav-main .open .dropdown-menu {height: 340px; opacity: 1; left: 15px; overflow: visible;} 
+.nav-main .dropdown-menu li a {padding: 10px 15px; text-align: center; color: #5f051f; text-transform: uppercase; font-size: 22px;}
+.nav-main .dropdown-menu li a:hover {color: #FFF; background-color: #5f051f;}
+
+.nav-main .dropdown-menu {}
+.nav-main .dropdown-menu li {background-color: #FFF; position: relative; left: 0px; border: 2px #FFF solid; transition: .5s ease-out;}
+.nav-main .dropdown-menu li:hover {left: 20px; border-color: #FFF;}
+
+.nav-main .dropdown-menu li a:before {font-family: 'FontAwesome'; right: initial; margin-left: -5px; font-size: }
+.nav-main .section-menu li:nth-child(1) a:before {content: "\f015";}
+.nav-main .section-menu li:nth-child(2) a:before {content: "\f044";}
+.nav-main .section-menu li:nth-child(3) a:before {content: "\f1c5";}
+.nav-main .section-menu li:nth-child(4) a:before {content: "\f008";}
+.nav-main .section-menu li:nth-child(5) a:before {content: "\f0e5";}
+.nav-main .section-menu li:nth-child(6) a:before {content: "\f095";}
+/*.nav-main .share-menu li:nth-child(1) a:before {content: "\f082";}
+.nav-main .share-menu li:nth-child(2) a:before {content: "\f081";}
+.nav-main .share-menu li:nth-child(3) a:before {content: "\f16d";}*/
+
+.container {width: 100%; height: 100%;}
+
+body {height: 100%; width: 100%; margin: 0; overflow-x: scroll; overflow-y: hidden; background-color: #FFF;}
+main {width: 4000px; height: 100%;}
+section {display: inline-block; height: 100%; width: 100%; vertical-align: top;} 
+ul li a {color: inherit;}
+
+.landing {background-color: #000;}
+.landing .background {position: fixed; background-image: url(../img/bg1.jpg); background-repeat: no-repeat; background-size: cover; height: 100%; width: 100%; opacity: .3;}
+.landing-logo img {position: relative; width: 300px; margin: 200px auto 0; opacity: 0;}
+.landing-logo button {display: block; margin: 20px auto 0; background-color: transparent; border-radius: 0; width: 65px; height: 32px; border: 1px solid #FFF; opacity: 0;}
+.landing-logo button:before {background: #5f051f;}
+.landing-logo button i {color: #FFF; position: relative;}
+
+.updates {background-color: transparent;}
+
+.carousel-wrapper .item img {width: 100%;}
+.carousel-wrapper .carousel-indicators {left: 0; bottom: 0; margin-bottom: 0; margin-left: 0; width: 100%; overflow: auto;}
+.carousel-wrapper .carousel-indicators li {width: 25% !important; height: 5px; border-radius: 0; border: none; display: block; float: left; margin: 0; background-color: #CCC; transition: .5s;}
+.carousel-wrapper .carousel-indicators li.active {background-color: #5f051f;}
+.carousel-wrapper .title-box a:hover {text-decoration: none;}
+
+.align-content-right {text-align: right;}
+
+.news-wrapper {position: relative; height: 500px; top: 50%; transform: translateY(-50%); background-color: rgba(238,238,238,.5);}
+.news-heading p {font-family: 'Dosis', sans-serif;}
