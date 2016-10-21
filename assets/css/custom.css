@@ -39,21 +39,22 @@ section {display: inline-block; height: 100%; width: 100%; vertical-align: top; 
 ul li a {color: inherit;}
 
 .background {position: fixed; background-image: url(../img/bg1.jpg); background-repeat: no-repeat; background-size: cover; height: 100%; width: 100%;}
-.overlay {position: absolute; height: 100%; width: 100%;}
-.landing .overlay {background-color: rgba(0,0,0,.85);}
+.overlay {position: fixed; height: 100%; width: 100%; background-color: rgba(0,0,0,.85);}
+/*.landing .overlay {background-color: rgba(0,0,0,.85);}*/
 .landing-logo img {position: relative; width: 300px; margin: 200px auto 0; opacity: 0;}
 .landing-logo button {display: block; margin: 20px auto 0; background-color: transparent; border-radius: 0; width: 65px; height: 32px; border: 1px solid #FFF; opacity: 0;}
 .landing-logo button:before {background: #5f051f;}
 .landing-logo button i {color: #FFF; position: relative;}
 
 .updates {background-color: transparent;}
-.updates .overlay {background-color: rgba(0,0,0,.65);}
-.updates .container:before {position: absolute; top: -100px; height: 150px; width: 100%; left: 0; background-color: #202326; transform: skew(0deg, -4deg); content: " ";}
-.updates .container:after {position: absolute; bottom: -50px; height: 100px; width: 100%; left: 0; background-color: #202326; transform: skew(0deg, 4deg); content: " "; z-index: 48;}
+/*.updates .overlay {background-color: rgba(0,0,0,.65);}*/
+.updates .container:before {position: absolute; top: -100px; height: 200px; width: 100%; left: 0; background-color: #202326; transform: skew(0deg, -4deg); content: " ";}
+.updates .container:after {position: absolute; bottom: -50px; height: 200px; width: 100%; left: 0; background-color: #202326; transform: skew(0deg, 4deg); content: " "; z-index: 48;}
 .updates .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto; background-color: #202326;}
 .updates h3, .updates ul li {color: #FFF;}
-.news-heading {color: #FFF;}
-.news-heading p {font-family: 'Dosis', sans-serif;}
+
+.news-heading h2 {color: #FFF;}
+.news-heading p {font-family: 'Dosis', sans-serif; color: #FFF;}
 
 .carousel-wrapper .item img {width: 100%;}
 .carousel-wrapper .carousel-indicators {left: 0; bottom: 0; margin-bottom: 0; margin-left: 0; width: 100%; overflow: auto;}
@@ -63,3 +64,18 @@ ul li a {color: inherit;}
 
 .align-content-right {text-align: right;}
 
+/*.gallery .overlay {background-color: rgba(0,0,0,.85);}*/
+.gallery .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto;}
+.gallery-images {text-align: center;}
+.gallery-images li {width: 200px;  height: 200px; position: relative; margin: 10px 15px; background-color: #5f051f; padding: 0; cursor: pointer;}
+.gallery-images li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%}
+.gallery-images li div {overflow: hidden; height: 100%; width: 95%; display: inline-block; position: relative;}
+.gallery-images li:nth-child(odd) div {transform: translateZ(0) skew(0,-4deg); transition: .5s; transform-origin: left center;}
+.gallery-images li:nth-child(even) div {transform: translateZ(0) skew(0,4deg); transition: .5s; transform-origin: right center;}
+.gallery-images li:hover div {transform: translateZ(0) skew(0, 0deg); width: 100%;}
+.gallery-images li:nth-child(even) {text-align: right;}
+.gallery-images li:nth-child(odd) {text-align: left;}
+
+.videos .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto;}
+.featured-video {position: relative; width: 100%;}
+.featured-video video {width: 100%;}

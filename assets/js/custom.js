@@ -1,5 +1,6 @@
 		function setBody() {
 			$('body').css({'height': $(window).height(), 'width': $(window).width()});
+			$('main').css({'width': $(window).width() * 7});
 			$('section').css({'width': $(window).width()});
 			$('.wHeight').css({'height': $(window).height()});
 		}
@@ -29,6 +30,16 @@
 		    e.preventDefault();
 		});
 
+		function galleryCycle() {
+			// $('.gallery-images').cycle({fx: 'fade', speed: 200, timeout: 100}).cycle("pause");
+
+			// $('.gallery-images').hover(function(){
+			// 	$(this).cycle('resume');
+			// }, function(){
+			// 	$(this).cycle('pause');
+			// });
+		};
+
 		function scrollMagic() {
 			var controller = new ScrollMagic.Controller({vertical: false});
 			var tween = TweenMax.to("#target", 0.5, {backgroundColor: "green", width: "+=400"});
@@ -42,7 +53,7 @@
 			setBody();
 			animateArrow();
 			animateLanding();
-			scrollMagic();
+			galleryCycle();
 		});
 		
 		$(window).resize(function(){
