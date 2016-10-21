@@ -68,14 +68,22 @@ ul li a {color: inherit;}
 .gallery .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto;}
 .gallery-images {text-align: center;}
 .gallery-images li {width: 200px;  height: 200px; position: relative; margin: 10px 15px; background-color: #5f051f; padding: 0; cursor: pointer;}
-.gallery-images li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%}
-.gallery-images li div {overflow: hidden; height: 100%; width: 95%; display: inline-block; position: relative;}
+.gallery-images li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 100%; transition: .5s;}
+.gallery-images li div {overflow: hidden; height: 100%; width: 95%; display: inline-block; position: relative; background-color: #000;}
 .gallery-images li:nth-child(odd) div {transform: translateZ(0) skew(0,-4deg); transition: .5s; transform-origin: left center;}
 .gallery-images li:nth-child(even) div {transform: translateZ(0) skew(0,4deg); transition: .5s; transform-origin: right center;}
 .gallery-images li:hover div {transform: translateZ(0) skew(0, 0deg); width: 100%;}
 .gallery-images li:nth-child(even) {text-align: right;}
 .gallery-images li:nth-child(odd) {text-align: left;}
+.gallery-images li:hover img {opacity: .8;}
+.gallery-images li div p {position: absolute; left: 15px; bottom: -300px; color: #FFF; font-size: 24px; margin: 0; transform: rotate(-90deg) translateZ(0); transform-origin: left center; transition: .5s; text-shadow: 0px 0px 8px rgba(81, 81, 81, 1);}
+.gallery-images li:hover div p {left: 15px; bottom: -10px;}
 
 .videos .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto;}
 .featured-video {position: relative; width: 100%;}
 .featured-video video {width: 100%;}
+
+.team .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto;}
+.team-members {text-align: center;}
+.team-members li {height: 300px; width: 220px; margin: 10px; overflow: hidden;}
+.team-members li img {	}
