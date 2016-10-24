@@ -53,15 +53,19 @@ ul li a:hover {color: #5f051f;}
 .updates .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto; background-color: #202326;}
 .updates h3, .updates span, .updates ul li {color: #FFF;}
 
-.transform {width: 175px; height: 30px; text-align: center; perspective: 600px; transition: .5s; transform-style: preserve-3d; margin: 0 auto; transform-origin: center;}
+.news-heading {perspective: 800px;}
+.transform {width: 175px; height: 30px; text-align: center; transition: .5s; transform-style: preserve-3d; margin: 0 auto; transform-origin: center;}
 .transform .basic, .transform .hover {height: 100%; width: 100%; display: block;}
-.transform .basic {transform: translateZ(15px);}
-.transform .basic span, .transform .hover span {font-size: 30px; line-height: 28px; color: #FFF;}
-.transform .hover {transform: rotateX(-90deg) translateZ(-15px);}
-.transform:hover {transform: rotateX(90deg);}
+.transform .basic {transform: translateZ(15px); background-color: transparent;}
+.transform .basic span, .transform .hover span {font-size: 30px; line-height: 28px;}
+.transform .basic span {color: #FFF;}
+.transform .hover span {color: #202326;}
+.transform .hover {transform: rotateX(-90.0000deg) translateZ(-15px); background-color: #FFF;}
+/*.transform:hover {transform: rotateX(90deg);}*/
+.transform:hover span i {margin-left: 5px;}
 
 .news-heading h2 {color: #FFF; text-align: center;}
-.news-heading p {font-family: 'Dosis', sans-serif; color: #FFF; text-align: center; margin-top: 10px;}
+.news-heading p {font-family: 'Josefin Sans', sans-serif; color: #FFF; text-align: center; margin-top: 10px;}
 .carousel-wrapper .item img {width: 100%;}
 .carousel-wrapper .carousel-indicators {left: 0; bottom: 0; margin-bottom: 0; margin-left: 0; width: 100%; overflow: auto;}
 .carousel-wrapper .carousel-indicators li {width: 25% !important; height: 5px; border-radius: 0; border: none; display: block; float: left; margin: 0; background-color: #CCC; transition: .5s;}
@@ -73,7 +77,7 @@ ul li a:hover {color: #5f051f;}
 /*.gallery .overlay {background-color: rgba(0,0,0,.85);}*/
 .gallery .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto; text-align: center;}
 .gallery .news-heading {margin-bottom: 20px;}
-.gallery-images {text-align: center;}
+.gallery-images {text-align: center; max-width: 1079px; margin: 0 auto;}
 .gallery-images li {width: 250px;  height: 250px; position: relative; margin: 10px; background-color: #5f051f; padding: 0; cursor: pointer;}
 .gallery-images li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(1.1); filter: grayscale(1); height: 100%; transition: .5s;}
 .gallery-images li div {overflow: hidden; height: 100%; width: 95%; display: inline-block; position: relative; background-color: #000;}
@@ -83,17 +87,15 @@ ul li a:hover {color: #5f051f;}
 .gallery-images li:nth-child(even) {text-align: right;}
 .gallery-images li:nth-child(odd) {text-align: left;}
 .gallery-images li div p {position: absolute; height: 65px; padding-left: 10px; padding-top: 5px; margin: 0; bottom: 25px; color: #FFF; font-size: 22px; line-height: 22px; transform-origin: left center; transition: .5s; text-shadow: 0px 0px 8px rgba(81, 81, 81, 1); width: 100%; text-align: left;}
-.gallery-images li div p span {font-size:  14px; display: block; line-height: 14px; font-family: 'Dosis', sans-serif; transition: .4s;} 
+.gallery-images li div p span {font-size:  14px; display: block; line-height: 14px; font-family: 'Josefin Sans', sans-serif; transition: .4s;} 
 .gallery-images li div p span:before {display: block; border-top: 1px solid #FFF; content: " "; width: 0; transition: .8s;}
-.gallery-images li div .abstract {position: absolute; display: block; bottom: -300px; transition: .5s; color: #FFF; font-family: 'Dosis', sans-serif; padding: 0 10px; font-size: 12px; text-align: left;}
+.gallery-images li div .abstract {position: absolute; display: block; bottom: -300px; transition: .5s; color: #FFF; font-family: 'Josefin Sans', sans-serif; padding: 0 10px; font-size: 12px; text-align: left;}
 .gallery-images li:hover div .abstract {bottom: 20px;}
 .gallery-images li:hover div p {bottom: 170px;}
 .gallery-images li:hover img {opacity: .8; filter: grayscale(0); transform: translate(-50%, -50%) scale(1);}
 .gallery-images li:hover div p span:before {width: 100%;}
 .gallery-tab {margin-top: 20px;}
 
-/*.gallery-tab li {stroke-dasharray: 140 540; stroke-dashoffset: -474; stroke-width: 8px; fill: transparent; stroke: #5f051f; border-bottom: 5px solid #5f051f; transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;}*/
-/*.gallery-tab li:hover {stroke-width: 2px;}*/
 .gallery-tab li:nth-child(2):before {content: url('../img/diamond.png'); width: 2px; margin-right: 15px;}
 .gallery-tab li:nth-child(2):after {content: url('../img/diamond.png'); width: 2px; margin-left: 15px;}
 
@@ -101,9 +103,13 @@ ul li a:hover {color: #5f051f;}
 .featured-video {position: relative; width: 100%;}
 .featured-video video {width: 100%;}
 
+.projects {background-color: #202326;}
+.projects .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto; text-align: center;}
+
+
 .team .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto;}
 .team-members {text-align: center;}
-.team-members li {height: 300px; width: 220px; margin: 10px; overflow: hidden; position: relative; padding: 0;}
+.team-members li {height: 300px; width: 220px; margin: 10px; overflow: hidden; position: relative; padding: 0; cursor: pointer;}
 .team-members li:before {position: absolute; top: 2.5%; left: 5%; bottom: 2.5%; right: 5%; border-left: 1px solid #FFF; border-right: 1px solid #FFF; content: " "; height: 95%; width: 90%; transform: scale(1,0); opacity: 0; transition: 1s;}
 .team-members li:after {position: absolute; top: 2.5%; left: 5%; bottom: 2.5%; right: 5%; border-bottom: 1px solid #FFF; border-top: 1px solid #FFF; content: " "; height: 95%; width: 90%; transform: scale(0,1); opacity: 0; transition: 1s;}
 .team-members li:hover:before {transform: scale(1); opacity: 1;}
@@ -113,3 +119,22 @@ ul li a:hover {color: #5f051f;}
 .team-members li:hover div {opacity: 1;}
 .team-members li div p span {display: block; margin-top: 5px;}
 .team-members li div p span:before {content: "-"; margin-right: 5px;}
+
+.about .container {position: absolute; top: 50%; transform: translateY(-50%); height: auto;}
+.about .cycle-heading h3 {color: #FFF; font-size: 52px; font-family: 'Josefin Sans', sans-serif; width: auto; margin: 0 auto;} 
+.about .cycle-heading .cycle {display: inline-block; font-size: 52px; font-family: 'Josefin Sans', sans-serif; transition: 1s; opacity: 1; font-weight: 700; color: #5f051f;}
+.about .cycle-heading a {display: block; font-size: 30px; color: #FFF; text-align: center;}
+.about .cycle-heading a i,
+.about .cycle-heading a span {transition: .6s;}
+.about .cycle-heading a:hover i {margin-left: 10px;}
+.about .cycle-heading a:hover span {color: #5f051f;}
+
+.project-items {margin-top: 25px;}
+.project-items li {cursor: pointer; width: 200px; height: 225px; vertical-align: top; margin-top: 25px;}
+.project-items li .icon {border-radius: 1000px; height: 124px; width: 124px; text-align: center; background-color: #FFF; position: relative; display: table; margin: 0 auto;}
+.project-items li .icon i {font-size: 60px; color: #5f051f; position: relative; z-index: 10; display: table-cell; vertical-align: middle; transition: .2s;}
+.project-items li .icon .inner {border-radius: 1000px; height: 116px; width: 116px; top: 4px; right: 4px; left: 4px; bottom: 4px; position: absolute; background-color: #FFF; border: 2px solid #5f051f; transition: .4s;}
+.project-items li:hover .icon .inner {border-width: 58px;}
+.project-items li:hover .icon i {color: #FFF;}
+.project-items li .content h4 {color: #FFF; margin-top: 20px;}
+.project-items li .content p {font-family: 'Josefin Sans', sans-serif; color: #FFF; font-size: 12px;}
